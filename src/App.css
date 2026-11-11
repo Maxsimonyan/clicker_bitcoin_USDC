@@ -1,0 +1,138 @@
+/* Reset and centered dark gradient background */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: radial-gradient(circle at top, #1e293b, #0f172a 80%);
+  color: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Frosted glass card container */
+#Cen {
+  background: rgba(30, 41, 59, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 40px 32px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+/* Title styling */
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #cbd5e1;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+/* Glowing gold money counter */
+.counter-display {
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #fbbf24;
+  text-shadow: 0 0 25px rgba(251, 191, 36, 0.45);
+  margin: 10px 0 28px;
+  animation: numberBump 0.2s ease-out;
+}
+
+/* Button group layout */
+.button-group {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+button {
+  border: none;
+  border-radius: 14px;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+/* Primary emerald/gold click button */
+#b1 {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.35);
+  flex: 2;
+}
+
+#b1:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.5);
+}
+
+#b1:active {
+  transform: scale(0.93);
+}
+
+/* Secondary subtle restart button */
+#b2 {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  flex: 1;
+}
+
+#b2:hover {
+  background: rgba(239, 68, 68, 0.25);
+}
+
+#b2:active {
+  transform: scale(0.93);
+}
+
+/* Money GIF container and entrance animation */
+.gif-wrapper {
+  margin-top: 28px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid rgba(251, 191, 36, 0.4);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  animation: popIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.money-gif {
+  display: block;
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+}
+
+/* Keyframe animations */
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes numberBump {
+  0% {
+    transform: scale(1.18);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
